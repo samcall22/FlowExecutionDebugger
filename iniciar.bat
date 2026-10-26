@@ -52,7 +52,7 @@ exit /b 1
 :error
 echo.
 echo Se ha producido un error preparando el entorno. Revisa los mensajes anteriores.
-echo Si estas detras de un proxy corporativo, consulta la seccion "Problemas frecuentes" de INSTRUCCIONES.md.
+echo Si estas detras de un proxy corporativo, consulta la seccion "Problemas frecuentes" de README.md.
 echo.
 pause
 exit /b 1
