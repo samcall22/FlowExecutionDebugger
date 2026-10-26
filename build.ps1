@@ -14,7 +14,7 @@ try {
     New-Item -ItemType Directory -Path (Join-Path $packageDir "flowdebugger") -Force | Out-Null
 
     Copy-Item "flowdebugger\*.py" (Join-Path $packageDir "flowdebugger")
-    Copy-Item "main.py", "requirements.txt", "iniciar.bat", "INSTRUCCIONES.md", "LICENSE" $packageDir
+    Copy-Item "main.py", "requirements.txt", "iniciar.bat", "README.md", "LICENSE" $packageDir
 
     $zip = Join-Path "dist" "$packageName.zip"
     if (Test-Path $zip) { Remove-Item $zip -Force }
