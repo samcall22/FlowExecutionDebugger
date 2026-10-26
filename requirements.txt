@@ -1,0 +1,4 @@
+msal>=1.28
+msal-extensions>=1.1
+requests>=2.31
+truststore>=0.9
