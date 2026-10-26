@@ -97,7 +97,7 @@ Selecciona una fila y usa la barra de botones, el **clic derecho** o el **doble 
 | **Raw (run data only)** | Solo los datos de la ejecución, sin transformar. Útil para pasárselo a una IA u otras herramientas. |
 
 Cada iteración incluye **`portalIndex`** (el mismo número que muestra el portal de Power Automate) y, si está anidada, **`path`**, por ejemplo `Apply_to_each[2] > Apply_to_each_2[3]`.
-
+Para agilizar tu trabajo, puedes pasar cualquiera de estos JSON a una IA. Esta te ayudará a identificar errores o a localizar la iteración exacta del bucle que necesitas.
 ---
 
 ## 5. Casos típicos
