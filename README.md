@@ -2,9 +2,9 @@
 
 Herramienta de escritorio para localizar rápidamente ejecuciones de flujos de Power Automate, filtrarlas por los parámetros con los que se dispararon, saltar a la iteración exacta de un *Apply to each* y seguir las llamadas a flujos hijos.
 
-Se distribuye como **código fuente Python** (sin `.exe`): puedes revisar todo lo que hace antes de ejecutarlo. No necesitas XrmToolBox.
+Se distribuye como **código fuente Python**: puedes revisar todo lo que hace antes de ejecutarlo. No necesitas XrmToolBox.
 
-**Autor:** [samcall22](https://github.com/samcall22) · **Licencia:** [GPL-3.0-or-later](LICENSE) · Se proporciona **"tal cual", sin ninguna garantía** (ver [apartado 8](#8-autoría-licencia-y-exención-de-responsabilidad)).
+**Autor:** [samcall22](https://github.com/samcall22) · **Licencia:** [GPL-3.0-or-later](LICENSE)
 
 ---
 
@@ -94,6 +94,7 @@ Selecciona una fila y usa la barra de botones, el **clic derecho** o el **doble 
 | **Full** | Todo, tal como lo devuelve la API. |
 | **Clean (loops only)** | Lista plana de bucles con sus iteraciones, estados y salidas. |
 | **Tree (nested loops)** ⭐ | Jerarquía real: cada iteración lleva su `item`, sus `actions` y, dentro, los bucles anidados con sus propias iteraciones. |
+| **Raw (run data only)** | Solo los datos de la ejecución, sin transformar. Útil para pasárselo a una IA u otras herramientas. |
 
 Cada iteración incluye **`portalIndex`** (el mismo número que muestra el portal de Power Automate) y, si está anidada, **`path`**, por ejemplo `Apply_to_each[2] > Apply_to_each_2[3]`.
 
@@ -125,7 +126,6 @@ Cada iteración incluye **`portalIndex`** (el mismo número que muestra el porta
 | Hago doble clic y no se abre nada | Abre una terminal en la carpeta y ejecuta `iniciar.bat debug` para ver el error. |
 | Algo se quedó a medias en la primera instalación | Borra la carpeta `.venv` y vuelve a ejecutar `iniciar.bat`. |
 | El navegador no se abre al pulsar **Sign in** | Comprueba que tienes un navegador predeterminado configurado y vuelve a intentarlo. |
-| Error *AADSTS65001* / *"Necesita aprobación del administrador"* | Tu tenant exige consentimiento de un administrador para la aplicación. Avisa a quien te pasó la herramienta. |
 | No aparece el entorno | Revisa el **Tenant**: si el entorno está en otro tenant, escríbelo y vuelve a pulsar **Sign in**. |
 | ⚠ PARTIAL LIST | No eres administrador del entorno: solo ves tus flujos y los compartidos. |
 | El filtro **Solution** está vacío | No se pudo leer la información de soluciones de Dataverse (permisos). El resto funciona igual. |
